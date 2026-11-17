@@ -82,6 +82,8 @@ The platform combines machine learning, statistical analysis, and business intel
 
 ## 5. Project Architecture
 
+[View Detailed Project Architecture](reports/architecture_diagram.md)
+
 ```text
              Customer Dataset
                     |
