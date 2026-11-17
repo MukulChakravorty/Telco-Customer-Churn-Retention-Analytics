@@ -243,13 +243,21 @@ streamlit run app/streamlit_app.py
 
 The raw dataset is not included in this repository. Download the dataset separately and place the CSV file inside the appropriate `dataset/raw/` directory.
 
+
 ## 10. Live Application
 
-**Live Demo:** Deployment pending.
+**Live Demo:** [Customer Retention Intelligence Platform](https://telco-customer-churn-retention-analytics.onrender.com)
 
-**GitHub Repository:**
+**GitHub Repository:** [View Source Code](https://github.com/MukulChakravorty/Telco-Customer-Churn-Retention-Analytics)
 
-[Customer Retention Intelligence Platform](https://github.com/MukulChakravorty/Telco-Customer-Churn-Retention-Analytics)
+**Deployment Platform:** Render
+
+
+The application is deployed and publicly accessible. Users can explore customer churn analytics, customer segmentation, and the interactive retention ROI simulator.
+
+**Note:** The free hosting instance may take a little time to wake up after inactivity.
+
+
 
 ## 11. Project Information
 
