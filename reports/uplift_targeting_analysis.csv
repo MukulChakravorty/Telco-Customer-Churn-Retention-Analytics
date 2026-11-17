@@ -1,0 +1,4 @@
+Targeting_Percentage,Customers_Selected,Control_Customers,Treatment_Customers,Control_Churn_Rate,Treatment_Churn_Rate,Observed_Difference_pp
+10,131,81,50,44.44,36.0,-8.44
+20,263,151,112,41.72,32.14,-9.58
+30,395,221,174,42.99,35.63,-7.35

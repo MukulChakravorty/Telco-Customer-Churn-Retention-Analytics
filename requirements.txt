@@ -1,0 +1,39 @@
+
+# Data Analysis
+pandas
+numpy
+scipy
+
+# Data Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+lightgbm
+shap
+joblib
+
+# Uplift Modeling
+causalml
+
+# Survival Analysis
+lifelines
+
+# Web Application
+streamlit
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Notebook Environment
+jupyter
+ipykernel
+
+# File Handling
+openpyxl
+
+
+python-dotenv
