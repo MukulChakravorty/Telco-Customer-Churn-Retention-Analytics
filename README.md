@@ -1,186 +1,126 @@
 # Customer Retention Intelligence Platform
 
-An end-to-end Telecom Customer Churn Analytics and Retention Decision-Support Platform built using Python, LightGBM, Machine Learning, Customer Segmentation, and Streamlit.
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine_Learning-LightGBM-orange)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Development-yellow)
 
-The platform transforms customer data into actionable business insights by identifying churn patterns, predicting customer churn risk, exploring customer segments, and evaluating hypothetical retention campaign scenarios.
+**An End-to-End Telecom Customer Churn Analytics & Retention Decision-Support Platform**
+
+[GitHub Repository](https://github.com/MukulChakravorty/Telco-Customer-Churn-Retention-Analytics) | [Screenshots](#7-screenshots) | [Installation](#8-installation)
 
 ---
 
-## 1. Business Problem
+---
 
-Customer churn directly impacts recurring revenue and long-term business growth. Telecom companies need to understand why customers leave, identify customers at risk, and make informed retention decisions.
+## 1. Project Overview
 
-This project addresses these challenges through an integrated analytics platform combining exploratory data analysis, predictive modeling, customer segmentation, and financial scenario analysis.
+Customer churn directly impacts recurring revenue and long-term business growth. Telecom companies need to identify customers at risk, understand customer behavior, and make informed retention decisions.
 
-## 2. Project Objectives
+The **Customer Retention Intelligence Platform** transforms customer data into actionable business insights through predictive analytics, customer segmentation, uplift modeling, and retention campaign evaluation.
 
-- Analyze customer behavior and identify churn patterns.
-- Identify customer segments associated with higher churn.
-- Develop a machine learning model to predict customer churn.
-- Evaluate model performance using classification metrics.
-- Explore model interpretability and customer-level treatment-effect predictions.
-- Perform customer segmentation using KMeans clustering.
-- Estimate the financial impact of hypothetical retention campaigns.
+The platform combines machine learning, statistical analysis, and business intelligence to support data-driven customer retention strategies.
+
+## 2. Business Objectives
+
+- Identify customers with a high probability of churn.
+- Understand customer behavior and churn patterns.
+- Segment customers based on relevant characteristics.
+- Estimate customer responsiveness to retention campaigns.
+- Evaluate hypothetical campaign costs, benefits, and ROI.
+- Present analytical insights through an interactive dashboard.
 
 ## 3. Technology Stack
 
-| Category | Technologies |
-|---|---|
-| Programming | Python |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
-| Machine Learning | Scikit-learn, LightGBM |
-| Model Explainability | SHAP |
-| Uplift Modeling | CausalML |
-| Customer Segmentation | KMeans |
-| Application | Streamlit |
-| Model Persistence | Joblib |
-| Development | VS Code, Jupyter Notebook |
+| Category         | Technologies              |
+| ---------------- | ------------------------- |
+| Programming      | Python                    |
+| Data Analysis    | Pandas, NumPy             |
+| Visualization    | Matplotlib, Seaborn       |
+| Machine Learning | Scikit-learn, LightGBM    |
+| Explainability   | SHAP                      |
+| Uplift Modeling  | T-Learner                 |
+| Segmentation     | K-Means Clustering        |
+| Database         | PostgreSQL                |
+| Application      | Streamlit                 |
+| Development      | VS Code, Jupyter Notebook |
+| Version Control  | Git, GitHub               |
 
-## 4. Solution Architecture
+## 4. Key Features
 
-The project follows an analytical workflow:
+### Customer Churn Analytics
 
-1. Customer Dataset
-2. Data Quality Assessment
-3. Exploratory Data Analysis
-4. Feature Engineering and Preprocessing
-5. LightGBM Churn Prediction
-6. Model Evaluation and Explainability
-7. Uplift Modeling and Evaluation
-8. Customer Segmentation
-9. Interactive Streamlit Application
-10. Retention ROI Scenario Analysis
+- Exploratory data analysis.
+- Customer churn pattern identification.
+- Tenure, contract, demographic, and service usage analysis.
 
-## 5. Key Project Modules
+### Predictive Modeling
 
-### A. Exploratory Data Analysis
+- LightGBM-based churn prediction.
+- Model evaluation and performance analysis.
+- Reusable machine learning pipelines.
 
-- Customer churn distribution
-- Demographic analysis
-- Contract-based churn analysis
-- Customer tenure analysis
-- Customer behavior exploration
-- Business insight generation
+### Customer Segmentation
 
-### B. Churn Prediction
+- K-Means-based customer grouping.
+- Customer profile analysis.
+- Segment-level business insights.
 
-- LightGBM classification
-- Churn probability estimation
-- Customer-level churn predictions
-- Classification performance evaluation
-- Model artifact persistence
+### Uplift Modeling
 
-### C. Survival Analysis
+- Treatment and control group analysis.
+- Propensity score estimation.
+- T-Learner-based uplift predictions.
+- Retention campaign targeting analysis.
 
-- Customer retention duration analysis
-- Time-to-event analysis
-- Customer survival patterns
+### Retention ROI Simulator
 
-### D. Uplift Modeling
+- Interactive campaign scenario evaluation.
+- Discount and campaign cost inputs.
+- Estimated retention benefits and financial impact.
 
-- T-Learner treatment-effect modeling
-- Individual uplift predictions
-- Uplift decile analysis
-- AUUC and Qini evaluation
-
-**Important:** Uplift results are experimental. The current evaluation indicates that further validation is necessary before using predictions for real-world retention campaign targeting.
-
-### E. Customer Segmentation
-
-- KMeans clustering
-- Customer segment identification
-- Segment distribution analysis
-- Customer segment profiling
-
-### F. Retention ROI Simulator
-
-An interactive Streamlit module that allows users to explore hypothetical retention campaign scenarios.
-
-Configurable assumptions include:
-
-- Number of customers targeted
-- Discount percentage
-- Discount duration
-- Assumed retention success rate
-- Revenue projection period
-- Campaign contact cost
-
-Financial outputs include:
-
-- Expected customers retained
-- Estimated revenue preserved
-- Total campaign cost
-- Net financial benefit
-- Estimated campaign ROI
-
-**Note:** The ROI simulator uses user-defined assumptions and average monthly charges. It provides illustrative gross-revenue estimates, not guaranteed financial returns or validated causal uplift estimates.
-
-## 6. Dataset Overview
-
-The project uses a telecom customer churn dataset containing 7,043 customer records.
-
-| Metric | Value |
-|---|---:|
-| Total Customers | 7,043 |
-| Churned Customers | 1,869 |
-| Retained Customers | 5,174 |
-| Overall Churn Rate | 26.54% |
-
-## 7. Key Business Insights
-
-The exploratory analysis identified several important churn patterns.
-
-| Customer Segment | Churn Rate |
-|---|---:|
-| Month-to-Month Contract | 45.84% |
-| One-Year Contract | 10.71% |
-| Two-Year Contract | 2.55% |
-| 0–6 Months Tenure | 53.33% |
-| 7–12 Months Tenure | 35.34% |
-| 13–24 Months Tenure | 28.71% |
-| 25–48 Months Tenure | 20.39% |
-| 49–72 Months Tenure | 9.51% |
-
-### Business Interpretation
-
-- Month-to-month customers exhibit substantially higher churn than customers with longer-term contracts.
-- Customers in their first six months have the highest observed churn rate.
-- Longer customer tenure is associated with lower churn.
-- Early customer engagement and contract-based retention strategies are important areas for further investigation.
-
-These observations represent associations in the dataset and do not establish causation.
-
-## 8. Streamlit Application
-
-The application provides four interactive modules:
-
-1. **Business Overview** – Customer statistics and dataset overview.
-2. **Churn Analysis** – Churn distribution and customer retention patterns.
-3. **Customer Segmentation** – KMeans-based customer segment exploration.
-4. **Retention ROI Simulator** – Hypothetical retention campaign financial analysis.
-
-### Application Screenshots
-
-#### 1. Business Overview
-![Business Overview](screenshots/business_overview.png)
-
-#### 2. Customer Churn Analysis
-![Customer Churn Analysis](screenshots/churn_ana_01.png)
-
-#### 3. Churn Rate by Tenure
-![Churn Rate by Tenure](screenshots/churn_rate_tenure_ana.png)
-
-#### 4. Customer Churn Insights
-![Customer Churn Insights](screenshots/cus_churn_02.png)
-
-#### 5. Customer Segmentation
-![Customer Segmentation](screenshots/cx_segmentation.png)
-
-## 9. Project Structure
+## 5. Project Architecture
 
 ```text
-DS-01_Telco_Customer_Churn/
+             Customer Dataset
+                    |
+                    v
+         Data Validation & PostgreSQL
+                    |
+                    v
+           Exploratory Data Analysis
+                    |
+                    v
+             Feature Engineering
+                    |
+          +---------+---------+
+          |                   |
+          v                   v
+    Churn Prediction    Customer Segmentation
+          |                   |
+          v                   v
+       LightGBM              K-Means
+          |                   |
+          +---------+---------+
+                    |
+                    v
+              Uplift Modeling
+                    |
+                    v
+             Retention Analysis
+                    |
+                    v
+            Streamlit Dashboard
+                    |
+                    v
+          Business Decision Support
+```
+
+## 6. Repository Structure
+
+```text
+Telco-Customer-Churn-Retention-Analytics/
 │
 ├── app/
 │   └── streamlit_app.py
@@ -195,91 +135,135 @@ DS-01_Telco_Customer_Churn/
 │   └── t_learner_uplift_model.joblib
 │
 ├── notebooks/
-│   └── 01_EDA.ipynb
+│   ├── 01_EDA.ipynb
+│   └── reports/
 │
 ├── reports/
-│   ├── customer_segments.csv
-│   ├── customer_uplift_predictions.csv
-│   └── uplift_evaluation_metrics.csv
 │
 ├── screenshots/
+│   ├── business_overview.png
+│   ├── churn_ana_01.png
+│   ├── churn_rate_tenure_ana.png
+│   ├── cus_churn_02.png
+│   └── cx_segmentation.png
 │
 ├── sql/
+│   └── 01_customer_data_validation.sql
 │
 ├── src/
-│   └── data_quality_check.py
+│   ├── data_quality_check.py
+│   ├── fetch_data.py
+│   ├── postgres_connection.py
+│   └── sql_analysis.py
 │
-├── .gitignore
-├── README.md
 ├── requirements.txt
-└── requirements-lock.txt
+├── requirements-lock.txt
+├── .gitignore
+└── README.md
 ```
 
-## 10. Installation and Execution
+### 7. Screenshots
 
-### Prerequisites
+### 7.1 Business Overview
 
-- Python 3.12
-- Git
-- Visual Studio Code (recommended)
+![Business Overview](screenshots/business_overview.png)
+
+---
+
+### 7.2 Customer Churn Analysis
+
+![Customer Churn Analysis](screenshots/churn_ana_01.png)
+
+---
+
+### 7.3 Churn Rate by Tenure
+
+![Churn Rate by Tenure](screenshots/churn_rate_tenure_ana.png)
+
+---
+
+### 7.4 Customer Analytics
+
+![Customer Analytics](screenshots/cus_churn_02.png)
+
+---
+
+### 7.5 Customer Segmentation
+
+![Customer Segmentation](screenshots/cx_segmentation.png)
+
+
+
+
+## 8. Installation
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-
-cd DS-01_Telco_Customer_Churn
+git clone https://github.com/MukulChakravorty/Telco-Customer-Churn-Retention-Analytics.git
 ```
 
-### Step 2: Create a Virtual Environment
+### Step 2: Navigate to the Project
+
+```bash
+cd Telco-Customer-Churn-Retention-Analytics
+```
+
+### Step 3: Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it on Windows:
+### Step 4: Activate the Environment
+
+Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-### Step 3: Install Dependencies
+### Step 5: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Run the Application
+### Step 6: Launch the Application
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-The application will open in your default browser.
+## 9. Dataset
 
-## 11. Model and Business Limitations
+**Dataset:** Telco Customer Churn
 
-- Predictive performance should be assessed using multiple classification metrics rather than accuracy alone.
-- Uplift predictions require stronger validation and, ideally, randomized treatment-control experiments.
-- ROI outputs depend on configurable assumptions and should not be interpreted as actual campaign performance.
-- Model predictions should support, not replace, business judgment.
+**Source:** [Kaggle – Telco Customer Churn Dataset](https://www.kaggle.com/datasets/alfathterry/telco-customer-churn-11-1-3)
 
-## 12. Future Improvements
+The raw dataset is not included in this repository. Download the dataset separately and place the CSV file inside the appropriate `dataset/raw/` directory.
 
-- Improve model calibration and threshold optimization.
-- Strengthen uplift model validation.
-- Integrate a production database.
-- Add automated model monitoring.
-- Enhance customer-level retention recommendations.
-- Deploy the application to a cloud platform.
+## 10. Live Application
 
-## 13. Project Information
+**Live Demo:** Deployment pending.
 
-**Project Name:** Customer Retention Intelligence Platform
-**Domain:** Telecom Analytics / Customer Retention
-**Project Type:** End-to-End Data Science Project
-**Author:** Mukul Chakravorty
+**GitHub Repository:**
+
+[Customer Retention Intelligence Platform](https://github.com/MukulChakravorty/Telco-Customer-Churn-Retention-Analytics)
+
+## 11. Project Information
+
+| Field        | Details                                  |
+| ------------ | ---------------------------------------- |
+| Project Name | Customer Retention Intelligence Platform |
+| Domain       | Telecom Analytics / Customer Retention   |
+| Project Type | End-to-End Data Science Project          |
+| Author       | Mukul Chakravorty                        |
+| Repository   | Public GitHub Repository                 |
 
 ---
+---
 
-*Built as part of a practical Data Science capstone project focused on transforming customer analytics into business-oriented decision support.*
+**Turning Customer Data into Actionable Retention Intelligence.**
+
+Built with Python, Machine Learning, and Business Analytics.
